@@ -1,0 +1,6 @@
+<label for="exampleFormControlSelect1">Marques</label>
+<select class="form-control" id="selectMarque" name="selectMarques">
+    <% marques.forEach(function (marque) { %>
+        <option value="<%= marque._id %>"><%= marque.nom %></option>
+    <% }) %>
+</select>
