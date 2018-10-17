@@ -10,16 +10,14 @@ class Automate {
         populate('id_types').
         exec(function (err, result) {
             if(!err){
-                //console.log("result =>", result);
                 res.render('../views/automate',{
                     message: 'bonsoir je test un truc en node js',
                     automates: result
                 })
             }else{
-                console.log(err);
+                console.log("erreur lors de la récupération de données =>",err);
             }
         });
-        //console.log(test);
     }
 
     saveAutomate(req, res){
